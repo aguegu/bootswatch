@@ -9,9 +9,7 @@
     "url": "git://github.com/aguegu/bootswatch.git"
   },
   "license": "MIT",
-  "ignore": [
-    "2",
-    "api",
+  "ignore": [    
     "assets",
     "bower_components",
     "custom",
@@ -32,7 +30,10 @@
     "*/index.html",
     "**/.*",
     "node_modules",
-    "test"
+    "test",
+    "fonts",
+    "*.css",
+    "*.less"
   ],
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1"
