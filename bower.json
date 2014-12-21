@@ -6,7 +6,7 @@
   "homepage": "http://bootswatch.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thomaspark/bootswatch.git"
+    "url": "git://github.com/aguegu/bootswatch.git"
   },
   "license": "MIT",
   "ignore": [
@@ -29,15 +29,26 @@
     "Gruntfile.js",
     "index.html",
     "package.json",
-    "*/index.html"
+    "*/index.html",
+    "**/.*",
+    "node_modules",
+    "test"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.1",
     "bootstrap-sass-official": "~3.3.1"
   },
   "devDependencies": {
     "font-awesome": "~4.0.0",
     "html5shiv": "~3.7.0",
     "respond": "~1.4.2"
-  }
+  },
+  "authors": [
+    "Weihong Guan <weihong.guan@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "bootstrap"
+  ]
 }
