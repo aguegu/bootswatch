@@ -1,7 +1,6 @@
-.idea
-bower_components
 node_modules
-build
-_site
-*.lock
-.sass-cache/
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components
