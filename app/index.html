@@ -1,823 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Bootswatch: Free themes for Bootstrap</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-  <!-- build:css styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
-
-</head>
-
-<body id="home">
-  <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-  <div class="navbar navbar-default navbar-fixed-top navbar-transparent">
-    <div class="container">
-      <div class="navbar-header">
-        <a href="./" class="navbar-brand"><img src="images/logo-nav.png">Bootswatch</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="./default/">Default</a>
-              </li>
-              <li class="divider"></li>
-              <li><a href="./cerulean/">Cerulean</a>
-              </li>
-              <li><a href="./cosmo/">Cosmo</a>
-              </li>
-              <li><a href="./cyborg/">Cyborg</a>
-              </li>
-              <li><a href="./darkly/">Darkly</a>
-              </li>
-              <li><a href="./flatly/">Flatly</a>
-              </li>
-              <li><a href="./journal/">Journal</a>
-              </li>
-              <li><a href="./lumen/">Lumen</a>
-              </li>
-              <li><a href="./paper/">Paper</a>
-              </li>
-              <li><a href="./readable/">Readable</a>
-              </li>
-              <li><a href="./sandstone/">Sandstone</a>
-              </li>
-              <li><a href="./simplex/">Simplex</a>
-              </li>
-              <li><a href="./slate/">Slate</a>
-              </li>
-              <li><a href="./spacelab/">Spacelab</a>
-              </li>
-              <li><a href="./superhero/">Superhero</a>
-              </li>
-              <li><a href="./united/">United</a>
-              </li>
-              <li><a href="./yeti/">Yeti</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="./help/">Help</a>
-          </li>
-          <li>
-            <a href="http://news.bootswatch.com">Blog</a>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a>
-          </li>
-          <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="splash">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-12">
-          <!-- <div><img class="logo" src="assets/img/logo.png"></div> -->
-          <h1>Free themes for Bootstrap</h1>
-          <div id="social">
-            <span>
-                <iframe id="gh-fork" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
-                <iframe id="gh-star" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-              </span>
-            <span>
-                <a href="https://twitter.com/bootswatch" class="twitter-follow-button" data-show-count="false" data-show-screen-name="true">Follow @bootswatch</a>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bootswatch.com" data-via="bootswatch">Tweet</a>
-              </span>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <div class="sponsor">
-                <a href="http://gridgum.com/themes/category/bootstrap-themes/?utm_source=Bootswatch&utm_medium=250ad&utm_campaign=Bootswatch%20Campaign" target="_blank" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'gridgum']);">
-                  <img src="images/gridgum.png" alt="Gridgum" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'gridgum']);">
-                </a>
-              </div>
-            </div>
-          </div>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Free themes for Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <!-- build:css styles/vendor.css-->
+    <!-- bower:css-->
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:css styles/main.css-->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild-->
+  </head>
+  <body id="home">
+    <!--if lt IE 10
+    p.browsehappy
+      | You are using an
+      strong outdated
+      | browser. Please
+      a(href="http://browsehappy.com/") upgrade your browser
+      | to improve your experience.
+    -->
+    <div class="navbar navbar-default navbar-fixed-top navbar-transparent">
+      <div class="container">
+        <div class="navbar-header"><a href="./" class="navbar-brand"><img src="images/logo-nav.png">Bootswatch</a>
+          <button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
         </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="section-tout">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-4 col-sm-6">
-          <h3><i class="fa fa-file-o"></i> Easy to Install</h3>
-          <p>Simply download a CSS file and replace the one in Bootstrap. No messing around with hex values.</p>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <h3><i class="fa fa-github"></i> Open Source</h3>
-          <p>Bootstrap themes are released under the MIT License and maintained by the community on <a target="_blank" href="https://github.com/thomaspark/bootswatch">GitHub</a>.</p>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <h3><i class="fa fa-wrench"></i> Tuned for 3.3.1</h3>
-          <p>Themes are built for the latest version of Bootstrap. <a href="2/">Version 2.3.2</a> and <a target="_blank" href="https://github.com/thomaspark/bootswatch/tags">others</a> are also available to download.</p>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <h3><i class="fa fa-cogs"></i> Modular</h3>
-          <p>Changes are contained in just two LESS or SASS files, enabling modification and ensuring forward compatibility.</p>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <h3><i class="fa fa-cloud"></i> Get Plugged In</h3>
-          <p>An <a href="./help/#api">API</a> is available for integrating with your platform. In use by <a href="https://nodebb.org/" target="_blank">NodeBB</a>, <a href="http://yabdab.com/stacks/bootsnap" target="_blank">BootSnap</a>, and others.</p>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <h3><i class="fa fa-bullhorn"></i> Stay Updated</h3>
-          <p>Be notified about updates by subscribing via <a href="http://feeds.feedburner.com/bootswatch">RSS feed</a>, <a href="http://feedburner.google.com/fb/a/mailverify?uri=bootswatch&amp;loc=en_US">email</a>, or <a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Tumblr</a>.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="section-preview">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="cerulean/"><img src="cerulean/thumbnail.png" class="img-responsive" alt="Cerulean">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Cerulean</h3>
-              <p>A calm blue sky</p>
-              <div class="btn-group"><a class="btn btn-info" href="cerulean/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="cerulean/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="cerulean/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="cerulean/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="cerulean/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="cerulean/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="cerulean/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="cerulean/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="cosmo/"><img class="img-responsive" src="cosmo/thumbnail.png" alt="Cosmo">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Cosmo</h3>
-              <p>An ode to Metro</p>
-              <div class="btn-group"><a class="btn btn-info" href="cosmo/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="cosmo/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cosmo', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="cosmo/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cosmo', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="cosmo/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cosmo', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="cosmo/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cosmo', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="cosmo/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cosmo', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="cosmo/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cosmo', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="cosmo/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cosmo', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="cyborg/"><img class="img-responsive" src="cyborg/thumbnail.png" alt="Cyborg">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Cyborg</h3>
-              <p>Jet black and electric blue</p>
-              <div class="btn-group"><a class="btn btn-info" href="cyborg/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="cyborg/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cyborg', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="cyborg/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cyborg', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="cyborg/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cyborg', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="cyborg/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cyborg', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="cyborg/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cyborg', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="cyborg/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cyborg', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="cyborg/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cyborg', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="darkly/"><img class="img-responsive" src="darkly/thumbnail.png" alt="Darkly">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Darkly</h3>
-              <p>Flatly in night mode</p>
-              <div class="btn-group"><a class="btn btn-info" href="darkly/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="darkly/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'darkly', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="darkly/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'darkly', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="darkly/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'darkly', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="darkly/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'darkly', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="darkly/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'darkly', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="darkly/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'darkly', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="darkly/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'darkly', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="flatly/"><img class="img-responsive" src="flatly/thumbnail.png" alt="Flatly">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Flatly</h3>
-              <p>Flat and modern</p>
-              <div class="btn-group"><a class="btn btn-info" href="flatly/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="flatly/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'flatly', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="flatly/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'flatly', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="flatly/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'flatly', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="flatly/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'flatly', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="flatly/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'flatly', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="flatly/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'flatly', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="flatly/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'flatly', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="journal/"><img class="img-responsive" src="journal/thumbnail.png" alt="Journal">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Journal</h3>
-              <p>Crisp like a new sheet of paper</p>
-              <div class="btn-group"><a class="btn btn-info" href="journal/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="journal/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'journal', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="journal/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'journal', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="journal/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'journal', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="journal/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'journal', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="journal/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'journal', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="journal/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'journal', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="journal/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'journal', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="lumen/"><img src="lumen/thumbnail.png" class="img-responsive" alt="Lumen">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Lumen</h3>
-              <p>Light and shadow</p>
-              <div class="btn-group"><a class="btn btn-info" href="lumen/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="lumen/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'lumen', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="lumen/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'lumen', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="lumen/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'lumen', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="lumen/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'lumen', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="lumen/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'lumen', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="lumen/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'lumen', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="lumen/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'lumen', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="paper/"><img class="img-responsive" src="paper/thumbnail.png" alt="Paper">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Paper</h3>
-              <p>Material is the metaphor</p>
-              <div class="btn-group"><a class="btn btn-info" href="paper/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="paper/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'paper', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="paper/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'paper', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="paper/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'paper', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="paper/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'paper', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="paper/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'paper', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="paper/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'paper', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="paper/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'paper', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="readable/"><img class="img-responsive" src="readable/thumbnail.png" alt="Readable">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Readable</h3>
-              <p>Optimized for legibility</p>
-              <div class="btn-group"><a class="btn btn-info" href="readable/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="readable/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="readable/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="readable/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="readable/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="readable/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="readable/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="readable/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="sandstone/"><img src="sandstone/thumbnail.png" class="img-responsive" alt="Sandstone">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Sandstone</h3>
-              <p>A touch of warmth</p>
-              <div class="btn-group"><a class="btn btn-info" href="sandstone/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="sandstone/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'sandstone', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="sandstone/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'sandstone', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="sandstone/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'sandstone', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="sandstone/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'sandstone', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="sandstone/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'sandstone', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="sandstone/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'sandstone', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="sandstone/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'sandstone', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="simplex/"><img class="img-responsive" src="simplex/thumbnail.png" alt="Simplex">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Simplex</h3>
-              <p>Mini and minimalist</p>
-              <div class="btn-group"><a class="btn btn-info" href="simplex/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="simplex/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="simplex/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="simplex/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="simplex/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="simplex/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="simplex/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="simplex/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="slate/"><img class="img-responsive" src="slate/thumbnail.png" alt="Slate">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Slate</h3>
-              <p>Shades of gunmetal gray</p>
-              <div class="btn-group"><a class="btn btn-info" href="slate/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="slate/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="slate/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="slate/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="slate/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="slate/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="slate/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="slate/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="spacelab/"><img class="img-responsive" src="spacelab/thumbnail.png" alt="Spacelab">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Spacelab</h3>
-              <p>Silvery and sleek</p>
-              <div class="btn-group"><a class="btn btn-info" href="spacelab/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="spacelab/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="spacelab/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="spacelab/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="spacelab/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="spacelab/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="spacelab/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="spacelab/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="superhero/"><img class="img-responsive" src="superhero/thumbnail.png" alt="Superhero">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Superhero</h3>
-              <p>The brave and the blue</p>
-              <div class="btn-group"><a class="btn btn-info" href="superhero/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="superhero/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'superhero', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="superhero/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'superhero', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="superhero/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'superhero', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="superhero/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'superhero', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="superhero/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'superhero', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="superhero/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'superhero', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="superhero/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'superhero', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="united/"><img class="img-responsive" src="united/thumbnail.png" alt="United">
-              </a>
-            </div>
-            <div class="options">
-              <h3>United</h3>
-              <p>Ubuntu orange and unique font</p>
-              <div class="btn-group"><a class="btn btn-info" href="united/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="united/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="united/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="united/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="united/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="united/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="united/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="united/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-          <div class="preview">
-            <div class="image">
-              <a href="yeti/"><img class="img-responsive" src="yeti/thumbnail.png" alt="Yeti">
-              </a>
-            </div>
-            <div class="options">
-              <h3>Yeti</h3>
-              <p>A friendly foundation</p>
-              <div class="btn-group"><a class="btn btn-info" href="yeti/">Preview</a>
-              </div>
-              <div class="btn-group">
-                <a class="btn btn-info" target="_blank" href="yeti/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'yeti', 'bootstrap.min.css']);">Download</a>
-                <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="yeti/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'yeti', 'bootstrap.min.css']);">bootstrap.min.css</a>
-                  </li>
-                  <li><a target="_blank" href="yeti/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'yeti', 'bootstrap.css']);">bootstrap.css</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="yeti/variables.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'yeti', 'variables.less']);">variables.less</a>
-                  </li>
-                  <li><a target="_blank" href="yeti/bootswatch.less" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'yeti', 'bootswatch.less']);">bootswatch.less</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li><a target="_blank" href="yeti/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'yeti', '_variables.scss']);">_variables.scss</a>
-                  </li>
-                  <li><a target="_blank" href="yeti/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'yeti', '_bootswatch.scss']);">_bootswatch.scss</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-
-
-  </div>
-  </div>
-
-  <div class="container">
-    <footer>
-      <div class="row">
-        <div class="col-lg-12">
-
-          <ul class="list-unstyled">
-            <li class="pull-right"><a href="#top">Back to top</a>
+        <div id="navbar-main" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a id="themes" data-toggle="dropdown" href="#" class="dropdown-toggle">Themes<span class="caret"></span></a>
+              <ul aria-labelledby="themes" class="dropdown-menu">
+                <li><a href="./default/">Default</a></li>
+                <li class="divider"></li>
+                <li><a href="cerulean">cerulean</a></li>
+                <li><a href="cosmo">cosmo</a></li>
+                <li><a href="cyborg">cyborg</a></li>
+                <li><a href="darkly">darkly</a></li>
+                <li><a href="flatly">flatly</a></li>
+                <li><a href="journal">journal</a></li>
+                <li><a href="lumen">lumen</a></li>
+                <li><a href="paper">paper</a></li>
+                <li><a href="readable">readable</a></li>
+                <li><a href="sandstone">sandstone</a></li>
+                <li><a href="simplex">simplex</a></li>
+                <li><a href="slate">slate</a></li>
+                <li><a href="spacelab">spacelab</a></li>
+                <li><a href="superhero">superhero</a></li>
+                <li><a href="united">united</a></li>
+                <li><a href="yeti">yeti</a></li>
+              </ul>
             </li>
-            <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a>
-            </li>
-            <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a>
-            </li>
-            <li><a href="https://twitter.com/bootswatch">Twitter</a>
-            </li>
-            <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a>
-            </li>
-            <li><a href="./help/#api">API</a>
-            </li>
-            <li><a href="./help/#support">Support</a>
-            </li>
+            <li><a href="./help/">Help</a></li>
+            <li><a href="http://news.bootswatch.com">Blog</a></li>
           </ul>
-          <p>Made by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
-          <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
-          <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
-
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          </ul>
         </div>
       </div>
-
-    </footer>
-
-
-  </div>
-
-  <!-- build:js scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:js scripts/plugins.js -->
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-  <!-- endbuild -->
-
-  <!-- build:js scripts/main.js -->
-  <script src="scripts/main.js"></script>
-  <!-- endbuild -->
-</body>
-
+    </div>
+    <div class="splash">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- <div><img class="logo" src="assets/img/logo.png"></div>-->
+            <h1>Free themes for Bootstrap</h1>
+            <div id="social"><span>
+                <iframe id="gh-fork" src="http://ghbtns.com/github-btn.html?user=thomaspark&amp;repo=bootswatch&amp;type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
+                <iframe id="gh-star" src="http://ghbtns.com/github-btn.html?user=thomaspark&amp;repo=bootswatch&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></span><span><a href="https://twitter.com/bootswatch" data-show-count="false" data-show-screen-name="true" class="twitter-follow-button">Follow @bootswatch</a><a href="https://twitter.com/share" data-url="http://bootswatch.com" data-via="bootswatch" class="twitter-share-button">Tweet</a></span></div>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <div class="sponsor"><a href="http://gridgum.com/themes/category/bootstrap-themes/?utm_source=Bootswatch&amp;utm_medium=250ad&amp;utm_campaign=Bootswatch%20Campaign" target="_blank" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'gridgum']);"><img src="images/gridgum.png" alt="Gridgum" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'gridgum']);"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-tout">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-file-o"></i>Easy to Install</h3>
+            <p>Simply download a CSS file and replace the one in Bootstrap. No messing around with hex values.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-github"></i>Open Source</h3>
+            <p>Bootstrap themes are released under the MIT License and maintained by the community on<a target="_blank" href="https://github.com/thomaspark/bootswatch">GitHub</a>.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-wrench"></i>Tuned for 3.3.1</h3>
+            <p>Themes are built for the latest version of Bootstrap.<a href="2/">Version 2.3.2</a>and<a target="_blank" href="https://github.com/thomaspark/bootswatch/tags">others</a>are also available to download.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-cogs"></i>Modular</h3>
+            <p>Changes are contained in just two LESS or SASS files, enabling modification and ensuring forward compatibility.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-cloud"></i>Get Plugged In</h3>
+            <p>An<a href="./help/#api">API</a>is available for integrating with your platform. In use by<a href="https://nodebb.org/" target="_blank">NodeBB</a>,<a href="http://yabdab.com/stacks/bootsnap" target="_blank">BootSnap</a>, and others.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-bullhorn"></i>Stay Updated</h3>
+            <p>Be notified about updates by subscribing via<a href="http://feeds.feedburner.com/bootswatch">RSS feed</a>,<a href="http://feedburner.google.com/fb/a/mailverify?uri=bootswatch&amp;loc=en_US">email</a>, or<a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Tumblr</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-preview">
+      <div class="container">
+        <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="cerulean"><img src="cerulean/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>cerulean</h3>
+                          <p>A calm blue sky</p>
+                          <div class="btn-group"><a href="cerulean" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="cosmo"><img src="cosmo/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>cosmo</h3>
+                          <p>An ode to Metro</p>
+                          <div class="btn-group"><a href="cosmo" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="cyborg"><img src="cyborg/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>cyborg</h3>
+                          <p>Jet black and electric blue</p>
+                          <div class="btn-group"><a href="cyborg" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="darkly"><img src="darkly/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>darkly</h3>
+                          <p>Flatly in night mode</p>
+                          <div class="btn-group"><a href="darkly" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="flatly"><img src="flatly/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>flatly</h3>
+                          <p>Flat and modern</p>
+                          <div class="btn-group"><a href="flatly" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="journal"><img src="journal/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>journal</h3>
+                          <p>Crisp like a new sheet of paper</p>
+                          <div class="btn-group"><a href="journal" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="Lumen"><img src="Lumen/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>Lumen</h3>
+                          <p>Light and shadow</p>
+                          <div class="btn-group"><a href="Lumen" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="paper"><img src="paper/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>paper</h3>
+                          <p>Material is the metaphor</p>
+                          <div class="btn-group"><a href="paper" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="readable"><img src="readable/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>readable</h3>
+                          <p>Optimized for legibility</p>
+                          <div class="btn-group"><a href="readable" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="sandstone"><img src="sandstone/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>sandstone</h3>
+                          <p>A touch of warmth</p>
+                          <div class="btn-group"><a href="sandstone" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="simplex"><img src="simplex/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>simplex</h3>
+                          <p>Mini and minimalist</p>
+                          <div class="btn-group"><a href="simplex" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="slate"><img src="slate/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>slate</h3>
+                          <p>Shades of gunmetal gray</p>
+                          <div class="btn-group"><a href="slate" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="spacelab"><img src="spacelab/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>spacelab</h3>
+                          <p>Silvery and sleek</p>
+                          <div class="btn-group"><a href="spacelab" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="superhero"><img src="superhero/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>superhero</h3>
+                          <p>The brave and the blue</p>
+                          <div class="btn-group"><a href="superhero" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="united"><img src="united/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>united</h3>
+                          <p>Ubuntu orange and unique font</p>
+                          <div class="btn-group"><a href="united" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="preview">
+                        <div class="image"><a href="yeti"><img src="yeti/thumbnail.png" alt="Cerulean" class="img-responsive"></a></div>
+                        <div class="options">
+                          <h3>yeti</h3>
+                          <p>A friendly foundation</p>
+                          <div class="btn-group"><a href="yeti" class="btn btn-info">Preview</a></div>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+              <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
+              <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
+              <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
+              <li><a href="./help/#api">API</a></li>
+              <li><a href="./help/#support">Support</a></li>
+            </ul>
+            <p>Made by<a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>. Contact him at<a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
+            <p>Code released under the<a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on<a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from<a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from<a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- build:js scripts/vendor.js-->
+    <!-- bower:js-->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:js scripts/plugins.js-->
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild-->
+    <!-- build:js scripts/main.js-->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild-->
+  </body>
 </html>
