@@ -1,5 +1,6 @@
 // Core variables and mixins
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+// @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+$bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
