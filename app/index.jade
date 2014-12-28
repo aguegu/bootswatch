@@ -135,12 +135,7 @@ html(lang="en")
               .preview
                 .image
                   a(href= title)
-                    img.img-responsive(src= title + "/thumbnail.png", alt="Cerulean")
-                .options
-                  h3= title
-                  p= description
-                  .btn-group
-                    a.btn.btn-info(href=title) Preview
+                    img.img-responsive(src= "images/" + title + ".png", alt="Cerulean")
 
           +panel('cerulean', 'A calm blue sky')
           +panel('cosmo', 'An ode to Metro')

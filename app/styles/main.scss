@@ -1,9 +1,9 @@
-$bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
 $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 // bower:scss
 @import "./flatly/variables";
 @import "./_bootstrap";
+@import "./flatly/bootswatch";
 // endbower
 
 .browsehappy {
