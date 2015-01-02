@@ -4,10 +4,29 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
-gulp.task('styles', function () {
+gulp.task('styles_theme', $.folders('app/styles', function(fld) {
+  return gulp.src('app/styles/demo.scss')
+    .pipe($.replace(/theme/g, fld))
+    .pipe($.rename(fld + '.scss'))
+    .pipe(gulp.dest('.tmp/styles/'));
+}));
+
+gulp.task('styles_demo', ['styles_theme'], function() {
+  return gulp.src('.tmp/styles/*.scss')
+    .pipe($.plumber())
+    .pipe($.rubySass({
+      trace: true,
+      style: 'expanded'
+    }))
+    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe(gulp.dest('.tmp/styles/'));
+});
+
+gulp.task('styles', ['styles_demo'], function () {
   return gulp.src('app/styles/main.scss')
     .pipe($.plumber())
     .pipe($.rubySass({
+      trace: true,
       style: 'expanded',
       precision: 10
     }))
@@ -15,14 +34,45 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('.tmp/styles'));
 });
 
-gulp.task('templates', function() {
-  return gulp.src('app/*.jade')
+gulp.task('templates', ['templates_demo'], function() {
+  return gulp.src('app/index.jade')
     .pipe($.jade({
       pretty: true
     }))
-    .pipe(gulp.dest('app/'));
-
+    .pipe(gulp.dest('.tmp'));
 });
+
+var theme_dct = {
+  "cerulean": "A calm blue sky",
+  "cosmo": "An ode to Metro",
+  "cyborg": "Jet black and electric blue",
+  "darkly": "Flatly in night mode",
+  "flatly": "Flat and modern",
+  "journal": "Crisp like a new sheet of paper",
+  "Lumen": "Light and shadow",
+  "paper": "Material is the metaphor",
+  "readable": "Optimized for legibility",
+  "sandstone": "A touch of warmth",
+  "simplex": "Mini and minimalist",
+  "slate": "Shades of gunmetal gray",
+  "spacelab": "Silvery and sleek",
+  "superhero": "The brave and the blue",
+  "united": "Ubuntu orange and unique font",
+  "yeti": "A friendly foundation"
+};
+
+gulp.task('templates_demo', $.folders('app/styles/', function(fld) {
+  return gulp.src('app/demo.jade')
+    .pipe($.jade({
+      pretty: true,
+      data: {
+        "title": fld,
+        "description": theme_dct[fld]
+      }
+    }))
+    .pipe($.rename( fld + ".html"))
+    .pipe(gulp.dest('.tmp'));
+}));
 
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
@@ -38,7 +88,7 @@ gulp.task('html', ['templates', 'styles'], function () {
     .pipe($.replace, 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap','fonts');
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
-  return gulp.src('app/*.html')
+  return gulp.src('.tmp/*.html')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', cssChannel()))
@@ -123,8 +173,9 @@ gulp.task('watch', ['connect'], function () {
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
 
-  gulp.watch('app/*.jade', ['templates']);
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/demo.jade', ['templates_demo']);
+  gulp.watch('app/index.jade', ['templates']);
+  // gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('bower.json', ['wiredep']);
 });
 

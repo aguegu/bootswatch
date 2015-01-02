@@ -1,9 +1,9 @@
 $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 // bower:scss
-@import "./flatly/variables";
+@import "./flatly/_variables";
 @import "./_bootstrap";
-@import "./flatly/bootswatch";
+@import "./flatly/_bootswatch";
 // endbower
 
 .browsehappy {
@@ -181,7 +181,7 @@ footer {
       text-align: center;
 
       p {
-        margin-bottom: 2em;
+        margin-bottom: 1em;
       }
     }
   }
