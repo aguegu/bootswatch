@@ -32,7 +32,7 @@ html(lang="en")
                 span.caret
               ul.dropdown-menu(aria-labelledby="themes")
                 li
-                  a(href='default.html') Default
+                  a(href='default.html') default
                 li.divider
                 each val in ["cerulean", "cosmo", "cyborg", "darkly", "flatly", "journal", "lumen", "paper", "readable", "sandstone", "simplex", "slate", "spacelab", "superhero", "united", "yeti"]
                   li
@@ -48,11 +48,10 @@ html(lang="en")
               a(href="https://wrapbootstrap.com/?ref=bsw", target="_blank") WrapBootstrap
     .container
       #banner.page-header
-        .row
-          .col-lg-8.col-md-7.col-sm-6
+        .bs-component
+          .jumbotron
             h1 #{title}
-            p.lead #{description}
-          .col-lg-4.col-md-5.col-sm-6
+            p #{description}
       // Navbar
       .bs-docs-section.clearfix
         .row
