@@ -11,7 +11,7 @@ gulp.task('styles_theme', $.folders('app/styles', function(fld) {
     .pipe(gulp.dest('.tmp/styles/'));
 }));
 
-gulp.task('styles_demo', ['styles_theme'], function() {
+gulp.task('styles', ['styles_theme'], function() {
   return gulp.src('.tmp/styles/*.scss')
     .pipe($.plumber())
     .pipe($.rubySass({
@@ -20,26 +20,6 @@ gulp.task('styles_demo', ['styles_theme'], function() {
     }))
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe(gulp.dest('.tmp/styles/'));
-});
-
-gulp.task('styles', ['styles_demo'], function () {
-  return gulp.src('app/styles/main.scss')
-    .pipe($.plumber())
-    .pipe($.rubySass({
-      trace: true,
-      style: 'expanded',
-      precision: 10
-    }))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
-    .pipe(gulp.dest('.tmp/styles'));
-});
-
-gulp.task('templates', ['templates_demo'], function() {
-  return gulp.src('app/index.jade')
-    .pipe($.jade({
-      pretty: true
-    }))
-    .pipe(gulp.dest('.tmp'));
 });
 
 var theme_dct = {
@@ -58,7 +38,8 @@ var theme_dct = {
   "spacelab": "Silvery and sleek",
   "superhero": "The brave and the blue",
   "united": "Ubuntu orange and unique font",
-  "yeti": "A friendly foundation"
+  "yeti": "A friendly foundation",
+  "default": "bootstrap default"
 };
 
 gulp.task('templates_demo', $.folders('app/styles/', function(fld) {
@@ -73,6 +54,14 @@ gulp.task('templates_demo', $.folders('app/styles/', function(fld) {
     .pipe($.rename( fld + ".html"))
     .pipe(gulp.dest('.tmp'));
 }));
+
+gulp.task('templates', ['templates_demo'], function() {
+  return gulp.src('app/index.jade')
+    .pipe($.jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('.tmp'));
+});
 
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
@@ -175,7 +164,7 @@ gulp.task('watch', ['connect'], function () {
 
   gulp.watch('app/demo.jade', ['templates_demo']);
   gulp.watch('app/index.jade', ['templates']);
-  // gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('bower.json', ['wiredep']);
 });
 

@@ -9,8 +9,9 @@ html(lang="en")
     // bower:css
     // endbower
     // endbuild
-    // build:css styles/main.css
-    link(rel="stylesheet", href="styles/main.css")
+    // build:css styles/main.css    
+    link(rel="stylesheet", href="styles/flatly.css")
+    link(rel="stylesheet", href="./bower_components/font-awesome/css/font-awesome.min.css")
     // endbuild
   body#home
     <!--[if lt IE 10]>
@@ -41,7 +42,7 @@ html(lang="en")
                 span.caret
               ul.dropdown-menu(aria-labelledby="themes")
                 li
-                  a(href='default.html') Default
+                  a(href='default.html') default
                 li.divider
                 each val in ["cerulean", "cosmo", "cyborg", "darkly", "flatly", "journal", "lumen", "paper", "readable", "sandstone", "simplex", "slate", "spacelab", "superhero", "united", "yeti"]
                   li
@@ -79,7 +80,7 @@ html(lang="en")
               i.fa.fa-github
               | Open Source
             p
-              | Bootstrap themes are released under the MIT License and maintained by the community on
+              | Bootstrap themes are released under the MIT License and maintained by the community on 
               a(target="_blank", href="https://github.com/thomaspark/bootswatch") GitHub
               | .
           .col-lg-4.col-sm-6
@@ -87,10 +88,10 @@ html(lang="en")
               i.fa.fa-wrench
               | Tuned for 3.3.1
             p
-              | Themes are built for the latest version of Bootstrap.
-              a(href="2/") Version 2.3.2
-              | and
-              a(target="_blank", href="https://github.com/thomaspark/bootswatch/tags") others
+              | Themes are built for the latest version of Bootstrap. 
+              a(href="2/") Version 2.3.2              
+              | and 
+              a(target="_blank", href="https://github.com/thomaspark/bootswatch/tags") others 
               | are also available to download.
           .col-lg-4.col-sm-6
             h3
@@ -168,21 +169,21 @@ html(lang="en")
               li
                 a(href="./help/#support") Support
             p
-              | Made by
+              | Made by 
               a(href="http://thomaspark.me", rel="nofollow") Thomas Park
-              | . Contact him at
+              | . Contact him at 
               a(href="mailto:thomas@bootswatch.com") thomas@bootswatch.com
               | .
             p
-              | Code released under the
+              | Code released under the 
               a(href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE") MIT License
               | .
             p
-              | Based on
+              | Based on 
               a(href="http://getbootstrap.com", rel="nofollow") Bootstrap
-              | . Icons from
+              | . Icons from 
               a(href="http://fortawesome.github.io/Font-Awesome/", rel="nofollow") Font Awesome
-              | . Web fonts from
+              | . Web fonts from 
               a(href="http://www.google.com/webfonts", rel="nofollow") Google
               | .
     // build:js scripts/vendor.js

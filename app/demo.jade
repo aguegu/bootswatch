@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="utf-8")
     title Bootswatch: #{title}
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="styles/#{title}.css")
+    link(rel="stylesheet", href="styles/#{title}.css")    
   body
     <!--[if lt IE 10]>
     p.browsehappy
@@ -168,21 +168,13 @@ html(lang="en")
         .row
           .col-lg-6
             p.bs-component
-              a.btn.btn-default(href="#") Default
-              a.btn.btn-primary(href="#") Primary
-              a.btn.btn-success(href="#") Success
-              a.btn.btn-info(href="#") Info
-              a.btn.btn-warning(href="#") Warning
-              a.btn.btn-danger(href="#") Danger
-              a.btn.btn-link(href="#") Link
+              each v in ["default", "primary", "success", "info", "warning", "danger", "link"]
+                a(class="btn btn-#{v}", href="#")= v
+                = ' '
             p.bs-component
-              a.btn.btn-default.disabled(href="#") Default
-              a.btn.btn-primary.disabled(href="#") Primary
-              a.btn.btn-success.disabled(href="#") Success
-              a.btn.btn-info.disabled(href="#") Info
-              a.btn.btn-warning.disabled(href="#") Warning
-              a.btn.btn-danger.disabled(href="#") Danger
-              a.btn.btn-link.disabled(href="#") Link
+              each v in ["default", "primary", "success", "info", "warning", "danger", "link"]
+                a(class="btn btn-#{v} disabled", href="#")= v
+                = ' '              
             div(style="margin-bottom: 15px;")
               .btn-toolbar.bs-component(style="margin: 0;")
                 .btn-group
@@ -257,9 +249,12 @@ html(lang="en")
                       a(href="#") Separated link
             p.bs-component
               a.btn.btn-primary.btn-lg(href="#") Large button
+              = ' '
               a.btn.btn-primary(href="#") Default button
+              = ' '
               a.btn.btn-primary.btn-sm(href="#") Small button
-              a.btn.btn-primary.btn-xs(href="#") Mini button
+              = ' '
+              a.btn.btn-primary.btn-xs(href="#") Mini button              
           .col-lg-6
             p.bs-component
               a.btn.btn-default.btn-lg.btn-block(href="#") Block level button
@@ -717,12 +712,9 @@ html(lang="en")
           .col-lg-4
             h2 Labels
             .bs-component(style="margin-bottom: 40px;")
-              span.label.label-default Default
-              span.label.label-primary Primary
-              span.label.label-success Success
-              span.label.label-warning Warning
-              span.label.label-danger Danger
-              span.label.label-info Info
+              each v in ["default", "primary", "success", "info", "warning", "danger", "link"]
+                span(class="label label-#{v}")= v                
+                = ' '              
           .col-lg-4
             h2 Badges
             .bs-component
@@ -952,21 +944,21 @@ html(lang="en")
               li
                 a(href="../help/#support") Support
             p
-              | Made by
+              | Made by 
               a(href="http://thomaspark.me", rel="nofollow") Thomas Park
-              | . Contact him at
+              | . Contact him at 
               a(href="mailto:thomas@bootswatch.com") thomas@bootswatch.com
               | .
             p
-              | Code released under the
+              | Code released under the 
               a(href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE") MIT License
               | .
             p
-              | Based on
+              | Based on 
               a(href="http://getbootstrap.com", rel="nofollow") Bootstrap
-              | . Icons from
+              | . Icons from 
               a(href="http://fortawesome.github.io/Font-Awesome/", rel="nofollow") Font Awesome
-              | . Web fonts from
+              | . Web fonts from 
               a(href="http://www.google.com/webfonts", rel="nofollow") Google
               | .
     // build:js scripts/vendor.js
