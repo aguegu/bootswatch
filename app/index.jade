@@ -2,16 +2,16 @@ doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
-    title Bootswatch: Free themes for Bootstrap
+    title Bootswatch-Sass: Free Sass themes for Bootstrap
     meta(name="viewport", content="width=device-width, initial-scale=1")
     // Place favicon.ico and apple-touch-icon.png in the root directory
     // build:css styles/vendor.css
     // bower:css
+    link(rel="stylesheet", href="../bower_components/font-awesome/css/font-awesome.min.css")
     // endbower
     // endbuild
     // build:css styles/main.css    
-    link(rel="stylesheet", href="styles/flatly.css")
-    link(rel="stylesheet", href="./bower_components/font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet", href="styles/flatly.css")    
     // endbuild
   body#home
     <!--[if lt IE 10]>
@@ -29,7 +29,7 @@ html(lang="en")
         .navbar-header
           a.navbar-brand(href="./")
             img(src="images/logo-nav.png")
-            | Bootswatch
+            | Bootswatch-Sass
           button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-main")
             span.icon-bar
             span.icon-bar
@@ -46,11 +46,7 @@ html(lang="en")
                 li.divider
                 each val in ["cerulean", "cosmo", "cyborg", "darkly", "flatly", "journal", "lumen", "paper", "readable", "sandstone", "simplex", "slate", "spacelab", "superhero", "united", "yeti"]
                   li
-                    a(href= val + '.html')= val
-            li
-              a(href="./help/") Help
-            li
-              a(href="http://news.bootswatch.com") Blog
+                    a(href= val + '.html')= val            
           ul.nav.navbar-nav.navbar-right
             li
               a(href="http://builtwithbootstrap.com/", target="_blank") Built With Bootstrap
@@ -61,11 +57,11 @@ html(lang="en")
         .row
           .col-lg-12
             // <div><img class="logo" src="assets/img/logo.png"></div>
-            h1 Free themes for Bootstrap
+            h1 Free Sass themes for Bootstrap-Sass
             #social
               span
-                iframe#gh-fork(src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=fork", allowtransparency="true", frameborder="0", scrolling="0", width="53", height="20")
-                iframe#gh-star(src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true", allowtransparency="true", frameborder="0", scrolling="0", width="110", height="20")
+                iframe#gh-fork(src="http://ghbtns.com/github-btn.html?user=aguegu&repo=bootswatch&type=fork", allowtransparency="true", frameborder="0", scrolling="0", width="53", height="20")
+                iframe#gh-star(src="http://ghbtns.com/github-btn.html?user=aguegu&repo=bootswatch&type=watch&count=true", allowtransparency="true", frameborder="0", scrolling="0", width="110", height="20")
     .section-tout
       .container
         .row

@@ -1,6 +1,8 @@
 /* jshint devel:true */
 
 (function(){
+  'use strict';
+
   $(window).scroll(function () {
       var top = $(document).scrollTop();
       $('.splash').css({

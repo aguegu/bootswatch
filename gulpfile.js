@@ -11,7 +11,7 @@ gulp.task('styles_theme', $.folders('app/styles', function(fld) {
     .pipe(gulp.dest('.tmp/styles/'));
 }));
 
-gulp.task('styles', ['styles_theme'], function() {
+gulp.task('styles', function() {
   return gulp.src('.tmp/styles/*.scss')
     .pipe($.plumber())
     .pipe($.rubySass({
@@ -55,7 +55,7 @@ gulp.task('templates_demo', $.folders('app/styles/', function(fld) {
     .pipe(gulp.dest('.tmp'));
 }));
 
-gulp.task('templates', ['templates_demo'], function() {
+gulp.task('templates', function() {
   return gulp.src('app/index.jade')
     .pipe($.jade({
       pretty: true
@@ -70,7 +70,7 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('html', ['templates', 'styles'], function () {
+gulp.task('html', ['templates_demo', 'templates', 'styles_theme', 'styles'], function () {
   var lazypipe = require('lazypipe');
   var cssChannel = lazypipe()
     .pipe($.csso)
@@ -156,7 +156,7 @@ gulp.task('watch', ['connect'], function () {
 
   // watch for changes
   gulp.watch([
-    'app/*.html',
+    'app/*.jade',
     '.tmp/styles/**/*.css',
     'app/scripts/**/*.js',
     'app/images/**/*'
@@ -164,7 +164,8 @@ gulp.task('watch', ['connect'], function () {
 
   gulp.watch('app/demo.jade', ['templates_demo']);
   gulp.watch('app/index.jade', ['templates']);
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styles_theme']);
+  gulp.watch('app/styles/demo.scss', ['styles']);
   gulp.watch('bower.json', ['wiredep']);
 });
 
