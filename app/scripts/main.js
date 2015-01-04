@@ -8,23 +8,24 @@
       $('.splash').css({
         'background-position': '0px -'+(top/3).toFixed(2)+'px'
       });
-      if(top > 50)
+      if (top > 50) {
         $('#home > .navbar').removeClass('navbar-transparent');
-      else
+      } else {
         $('#home > .navbar').addClass('navbar-transparent');
+      }
   });
 
-  var $button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click(function(){
+  var $button = $('<div id="source-button" class="btn btn-primary btn-xs">&lt; &gt;</div>').click(function(){
     var html = $(this).parent().html();
     html = cleanSource(html);
-    $("#source-modal pre").text(html);
-    $("#source-modal").modal();
+    $('#source-modal pre').text(html);
+    $('#source-modal').modal();
   });
 
   $('.bs-component [data-toggle="popover"]').popover();
   $('.bs-component [data-toggle="tooltip"]').tooltip();
 
-  $(".bs-component").hover(function(){
+  $('.bs-component').hover(function(){
     $(this).append($button);
     $button.show();
   }, function(){
@@ -38,7 +39,7 @@
     lines.splice(-1, 1);
 
     var indentSize = lines[0].length - lines[0].trim().length,
-        re = new RegExp(" {" + indentSize + "}");
+        re = new RegExp(' {' + indentSize + '}');
 
     lines = lines.map(function(line){
       if (line.match(re)) {
@@ -48,7 +49,7 @@
       return line;
     });
 
-    lines = lines.join("\n");
+    lines = lines.join('\n');
 
     return lines;
   }
