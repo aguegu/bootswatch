@@ -5,13 +5,14 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles_theme', $.folders('app/styles', function(fld) {
+  console.log(fld);
   return gulp.src('app/styles/demo.scss')
     .pipe($.replace(/theme/g, fld))
     .pipe($.rename(fld + '.scss'))
     .pipe(gulp.dest('.tmp/styles/'));
 }));
 
-gulp.task('styles', function() {
+gulp.task('styles', ['styles_theme'], function() {
   return gulp.src('.tmp/styles/*.scss')
     .pipe($.plumber())
     .pipe($.rubySass({
@@ -29,7 +30,7 @@ var theme_dct = {
   "darkly": "Flatly in night mode",
   "flatly": "Flat and modern",
   "journal": "Crisp like a new sheet of paper",
-  "Lumen": "Light and shadow",
+  "lumen": "Light and shadow",
   "paper": "Material is the metaphor",
   "readable": "Optimized for legibility",
   "sandstone": "A touch of warmth",
@@ -55,7 +56,7 @@ gulp.task('templates_demo', $.folders('app/styles/', function(fld) {
     .pipe(gulp.dest('.tmp'));
 }));
 
-gulp.task('templates', function() {
+gulp.task('templates', ['templates_demo'], function() {
   return gulp.src('app/index.jade')
     .pipe($.jade({
       pretty: true
@@ -70,7 +71,7 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('html', ['templates_demo', 'templates', 'styles_theme', 'styles'], function () {
+gulp.task('html', ['templates', 'styles'], function () {
   var lazypipe = require('lazypipe');
   var cssChannel = lazypipe()
     .pipe($.csso)
@@ -79,6 +80,7 @@ gulp.task('html', ['templates_demo', 'templates', 'styles_theme', 'styles'], fun
 
   return gulp.src('.tmp/*.html')
     .pipe(assets)
+    .pipe($.print())
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', cssChannel()))
     .pipe(assets.restore())
@@ -107,6 +109,7 @@ gulp.task('extras', function () {
   return gulp.src([
     'app/*.*',
     '!app/*.html',
+    '!app/*.jade',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
