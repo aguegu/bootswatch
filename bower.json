@@ -4,7 +4,7 @@
     "bootstrap-sass-official": "~3.3.1",
     "font-awesome": "~4.2.0"
   },
-  "version": "4.0.1",
+  "version": "4.1.0",
   "homepage": "https://github.com/aguegu/bootswatch",
   "authors": [
     "Weihong Guan <weihong.guan@gmail.com>"
