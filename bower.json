@@ -1,8 +1,27 @@
 {
-  "name": "bootswatch",
-  "private": true,
+  "name": "bootswatch-sass",
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1",
     "font-awesome": "~4.2.0"
-  }
+  },
+  "version": "3.4.0",
+  "homepage": "https://github.com/aguegu/bootswatch",
+  "authors": [
+    "Weihong Guan <weihong.guan@gmail.com>"
+  ],
+  "description": "Free Sass themes for Bootstrap-Sass",
+  "main": "*.scss",
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "bootswatch"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
