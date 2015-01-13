@@ -1,5 +1,7 @@
 // bower:scss
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../app/styles/theme/_variables";
+@import "../../app/styles/_bootstrap";
+@import "../../app/styles/theme/_bootswatch";
 // endbower
 
 .browsehappy {
