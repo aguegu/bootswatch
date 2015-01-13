@@ -4,7 +4,13 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
-gulp.task('styles_theme', $.folders('app/styles', function(fld) {
+gulp.task('styles_demo', function(){
+  return gulp
+      .src('app/styles/**/*.scss')
+      .pipe(gulp.dest('.tmp/styles/'));
+});
+
+gulp.task('styles_theme', ['styles_demo'], $.folders('app/styles', function(fld) {
   console.log(fld);
   return gulp.src('app/styles/demo.scss')
     .pipe($.replace(/theme/g, fld))
