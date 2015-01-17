@@ -3,7 +3,7 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1"
   },
-  "version": "4.2.0",
+  "version": "4.2.1",
   "homepage": "https://github.com/aguegu/bootswatch",
   "authors": [
     "Thomas Park <thomas@bootswatch.com>",
