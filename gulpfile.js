@@ -29,11 +29,11 @@ gulp.task('styles_theme', function() {
     gulp
       .src(theme + '/*.scss')
       .pipe(gulp.dest('.tmp/styles/' + theme));
-
-    gulp
-      .src('_bootstrap.scss')
-      .pipe(gulp.dest('.tmp/styles/' + theme));
   }
+
+  gulp
+      .src('_bootstrap.scss')
+      .pipe(gulp.dest('.tmp/styles/'));
 });
 
 gulp.task('styles_demo', ['styles_theme'], function() {
