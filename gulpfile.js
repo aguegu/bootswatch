@@ -4,31 +4,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
-gulp.task('styles_demo', function(){
-  return gulp
-      .src('app/styles/**/*.scss')
-      .pipe(gulp.dest('.tmp/styles/'));
-});
-
-gulp.task('styles_theme', ['styles_demo'], $.folders('app/styles', function(fld) {
-  console.log(fld);
-  return gulp.src('app/styles/demo.scss')
-    .pipe($.replace(/theme/g, fld))
-    .pipe($.rename(fld + '.scss'))
-    .pipe(gulp.dest('.tmp/styles/'));
-}));
-
-gulp.task('styles', ['styles_theme'], function() {
-  return gulp.src('.tmp/styles/*.scss')
-    .pipe($.plumber())
-    .pipe($.rubySass({
-      trace: true,
-      style: 'expanded'
-    }))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
-    .pipe(gulp.dest('.tmp/styles/'));
-});
-
 var theme_dct = {
   "cerulean": "A calm blue sky",
   "cosmo": "An ode to Metro",
@@ -49,18 +24,52 @@ var theme_dct = {
   "default": "bootstrap default"
 };
 
-gulp.task('templates_demo', $.folders('app/styles/', function(fld) {
-  return gulp.src('app/demo.jade')
+gulp.task('styles_theme', function() {
+  for (var theme in theme_dct) {
+    gulp
+      .src(theme + '/*.scss')
+      .pipe(gulp.dest('.tmp/styles/' + theme));
+
+    gulp
+      .src('_bootstrap.scss')
+      .pipe(gulp.dest('.tmp/styles/' + theme));
+  }
+});
+
+gulp.task('styles_demo', ['styles_theme'], function() {
+  for (var theme in theme_dct) {
+    gulp.src('app/styles/demo.scss')
+      .pipe($.replace(/theme/g, theme))
+      .pipe($.rename(theme + '.scss'))
+      .pipe(gulp.dest('.tmp/styles/' + theme));
+  }
+});
+
+gulp.task('styles', ['styles_demo'], function() {
+  return gulp.src('.tmp/styles/**/*.scss')
+    .pipe($.plumber())
+    .pipe($.rubySass({
+      trace: true,
+      style: 'expanded'
+    }))
+    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe(gulp.dest('.tmp/styles/'));
+});
+
+gulp.task('templates_demo', function() {
+  for (var theme in theme_dct) {
+    gulp.src('app/demo.jade')
     .pipe($.jade({
       pretty: true,
       data: {
-        "title": fld,
-        "description": theme_dct[fld]
+        "title": theme,
+        "description": theme_dct[theme]
       }
     }))
-    .pipe($.rename( fld + ".html"))
+    .pipe($.rename( theme + ".html"))
     .pipe(gulp.dest('.tmp'));
-}));
+  }
+});
 
 gulp.task('templates', ['templates_demo'], function() {
   return gulp.src('app/index.jade')
