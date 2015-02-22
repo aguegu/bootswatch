@@ -15,7 +15,7 @@
     "bootstrap",
     "sass",
     "bootswatch",
-    "scss",
+    "scss"
   ],
   "license": "MIT",
   "ignore": [
