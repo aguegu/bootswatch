@@ -1,5 +1,5 @@
 {
-  "name": "bootswatch-sass",
+  "name": "bootswatch.scss",
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1"
   },
@@ -14,7 +14,8 @@
   "keywords": [
     "bootstrap",
     "sass",
-    "bootswatch"
+    "bootswatch",
+    "scss",
   ],
   "license": "MIT",
   "ignore": [
@@ -23,10 +24,7 @@
     "bower_components",
     "test",
     "tests",
-    "app/images",
-    "app/scripts",
-    "app/*.jade",
-    "app/*.ico",
+    "app",
     "*.sh",
     "gulpfile.js"
   ]

@@ -41,12 +41,12 @@ gulp.task('styles_demo', ['styles_theme'], function() {
     gulp.src('app/styles/demo.scss')
       .pipe($.replace(/theme/g, theme))
       .pipe($.rename(theme + '.scss'))
-      .pipe(gulp.dest('.tmp/styles/' + theme));
+      .pipe(gulp.dest('.tmp/styles/'));
   }
 });
 
 gulp.task('styles', ['styles_demo'], function() {
-  return gulp.src('.tmp/styles/**/*.scss')
+  return gulp.src('.tmp/styles/*.scss')
     .pipe($.plumber())
     .pipe($.rubySass({
       trace: true,
